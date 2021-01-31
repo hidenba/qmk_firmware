@@ -37,8 +37,8 @@ enum custom_keycodes {
 #define I3_SL SGUI(KC_L)
 #define I3_SQ SGUI(KC_Q)
 #define I3_SP SGUI(KC_P)
-
 #define I3_SSCLN SGUI(KC_SCLN)
+#define I3_LOCK LCAG(KC_L)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_QWERTY] = LAYOUT( \
@@ -51,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_LOWER] = LAYOUT( \
   KC_ESC,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                     KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,\
   _______, XXXXXXX, KC_UP,   XXXXXXX, XXXXXXX, KC_PLUS,                   KC_EQL,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_F12, \
-  _______, KC_LEFT, KC_DOWN, KC_RIGHT,XXXXXXX, KC_LBRC,                   KC_RBRC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+  _______, KC_LEFT, KC_DOWN, KC_RIGHT,XXXXXXX, KC_LBRC,                   KC_RBRC, XXXXXXX, XXXXXXX, I3_LOCK, XXXXXXX, XXXXXXX, \
   _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_LCBR, _______, _______, KC_RCBR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
                     _______, _______, _______, _______, _______, _______, _______, _______, _______, _______\
 ),
