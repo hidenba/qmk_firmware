@@ -34,6 +34,7 @@ enum custom_keycodes {
 #define I3_S0 SGUI(KC_0)
 #define I3_SQ SGUI(KC_Q)
 #define I3_SP SGUI(KC_P)
+#define I3_SX SGUI(KC_X)
 
 #define I3_SJ SGUI(KC_J)
 #define I3_SK SGUI(KC_K)
@@ -43,6 +44,7 @@ enum custom_keycodes {
 #define I3_K LGUI(KC_K)
 #define I3_L LGUI(KC_L)
 #define I3_SCLN LGUI(KC_SCLN)
+#define I3_ENT LGUI(KC_ENT)
 
 #define I3_LOCK LCAG(KC_L)
 
@@ -51,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_GRV,   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                     KC_6,    KC_7,    KC_8,    KC_9,    KC_0,     KC_BSLS, \
   KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                     KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,     KC_BSPC, \
   KC_LCTRL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                     KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN,  KC_QUOT, \
-  KC_LSFT,  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    I3_LOCK,I3_SP,   KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,  KC_MINS, \
+  KC_LSFT,  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    I3_LOCK,I3_SX,   KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,  KC_MINS, \
                      KC_LCTRL,KC_LGUI, KC_LALT, KC_LOWER,KC_SPC, KC_ENT,  KC_RAISE,  KC_RALT, KC_RGUI, KC_RCTRL \
 ),
 [_LOWER] = LAYOUT( \
@@ -59,7 +61,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, I3_SQ,   KC_UP,   XXXXXXX, XXXXXXX, KC_PLUS,                   KC_EQL,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_F12, \
   _______, KC_LEFT, KC_DOWN, KC_RIGHT,XXXXXXX, KC_LBRC,                   KC_RBRC, I3_J,    I3_K,    I3_L,    I3_SCLN, XXXXXXX, \
   _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_LCBR, _______, _______, KC_RCBR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
-                    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______\
+                    _______, _______, _______, _______, _______, I3_ENT,  _______, _______, _______, _______\
 ),
 [_RAISE] = LAYOUT( \
   KC_ESC,  I3_S1,   I3_S2,   I3_S3,   I3_S4,   I3_S5,                     I3_S6,   I3_S7,   I3_S8,   I3_S9,   I3_S0,   XXXXXXX, \
